@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class CoordinatesButton extends React.Component {
 
-  callback = (event) => {
+  handleClick = (event) => {
     let x = event.clientX;
     let y = event.clientY;
     this.props.onReceiveCoordinates([x, y])
@@ -11,7 +11,7 @@ export default class CoordinatesButton extends React.Component {
   render () {
     return (
       <div>
-        <button onClick={this.callback}>
+        <button onClick={this.handleClick}>
           Coordinates Button
         </button>
       </div>
